@@ -48,19 +48,11 @@ function TimeOfDay(time) {
     }
 }
 
-Hours=2
+Hours = 2
 
 
 TimeOfDay(Hours)
 
-
-
 messageVisibility(false, ".message", "message")
 
-
-let cards=document.querySelectorAll(".card");
-for(var i=0;i<cards.length;i++){
-    cards[i].addEventListener("mouseover",function(){
-       this.classList.add("hovering")
-    })
-}
+messageVisibility(true, ".card", "hovering")
