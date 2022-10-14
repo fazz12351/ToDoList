@@ -17,9 +17,16 @@ app.use(express.static("public"))
 
 
 app.get("/", function (req, res) {
+    let days=["Sunday","Monday","Tuesday","Wednesday","Thursay","Friday"]
     let daysOfTheWeek=new Date();
     let intDAy=daysOfTheWeek.getDay();
+    let currentDay=days[intDAy]
     console.log(intDAy)
+
+    res.render("list",{Day:currentDay,
+    Date:daysOfTheWeek})
+
+
 
 })
 
