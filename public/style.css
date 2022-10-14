@@ -1,9 +1,13 @@
 body{
-    background-color: red;
-    color: red;
-}
-/* 
-.hovering{
-    color: red;
+    background-color: black;
 
-} */
+}
+
+
+.message{
+    color: white;
+}
+.container{
+    padding:5px;
+    border: 1px solid white;
+}

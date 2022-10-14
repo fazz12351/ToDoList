@@ -1,5 +1,19 @@
-let hovering=document.querySelector("p");
+let messages = document.querySelectorAll(".message")
 
-hovering.addEventListener("mouseover",function(){
-    hovering.classList.add("hovering")
-})
+
+
+function messageVisibility(array, object, dec) {
+    if (array === true) {
+        let objects = document.querySelectorAll(object);
+        for (var i = 0; i < objects.length; i++) {
+            objects[i].classList.add(dec)
+        }
+
+    } else if (array === false) {
+        let objects = document.querySelector(object);
+        objects.classList.add(dec)
+    }
+}
+
+
+messageVisibility(false, ".message", "message")
