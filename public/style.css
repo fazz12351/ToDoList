@@ -1,13 +1,32 @@
-body{
-    background-color: black;
-
-}
-
-
-.message{
+.dark-text{
     color: white;
 }
+.light-text{
+    color: black;
+}
+
+
+
 .container{
     padding:5px;
+    border: 1px solid black;
+}
+
+
+.dark{
+    background-color: black;
+    color: white;
+}
+.dull{
+    background-color: cadetblue;
+}
+.bright{
+    background-color: yellow;
+}
+
+.dark-border{
+    border: 1px solid black;
+}
+.dark-border{
     border: 1px solid white;
 }
