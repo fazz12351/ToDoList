@@ -4,7 +4,6 @@ let container = document.querySelector(".container");
 let today = new Date();
 let Hours = today.getHours();
 
-console.log(container)
 
 
 //alters the dom elemtns. if its multiple object, set teh bool array to true, next paramnet select the dom elemnt using tags or calssses, and dec is the style we want from the css.
@@ -14,7 +13,7 @@ function messageVisibility(array, object, dec) {
         for (var i = 0; i < objects.length; i++) {
             objects[i].classList.add(dec)
         }
-        console.log(objects)
+
 
     } else if (array === false) {
         let objects = document.querySelector(object);
@@ -49,7 +48,7 @@ function TimeOfDay(time) {
     }
 }
 
-
+Hours=2
 
 
 TimeOfDay(Hours)
@@ -57,3 +56,11 @@ TimeOfDay(Hours)
 
 
 messageVisibility(false, ".message", "message")
+
+
+let cards=document.querySelectorAll(".card");
+for(var i=0;i<cards.length;i++){
+    cards[i].addEventListener("mouseover",function(){
+       this.classList.add("hovering")
+    })
+}
