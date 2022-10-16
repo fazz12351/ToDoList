@@ -4,7 +4,10 @@
 .light-text{
     color: black;
 }
-
+.welcome{
+    padding-top:50px; ;
+    text-align: center;
+}
 
 
 .container{
@@ -21,7 +24,7 @@
     background-color: cadetblue;
 }
 .bright{
-    background-color: yellow;
+    background-color: #A9FC04;
 }
 
 .dark-border{
@@ -34,4 +37,22 @@
 
 .hovering:hover{
     border:1px solid grey;
+}
+
+.whitebg{
+    background-color: white;;
+}
+.greybg{
+    background-color: grey;
+}
+.darkbg{
+    background-color: black;
+}
+
+
+
+.Bottom-Container{
+
+    margin-top: 50px;;
+    text-align: center;
 }

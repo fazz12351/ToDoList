@@ -14,17 +14,22 @@ app.use(express.static("public"))
 
 
 
+app.get("/",function(req,res){
+    res.sendFile(__dirname+"/index.html")
+})
 
+app.post("/", function (req, res) {
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursay", "Friday", "Saturday"]
+    let daysOfTheWeek = new Date();
+    let intDAy = daysOfTheWeek.getDay();
+    let myday = days[intDAy]
+    console.log(myday)
 
-app.get("/", function (req, res) {
-    let days=["Sunday","Monday","Tuesday","Wednesday","Thursay","Friday"]
-    let daysOfTheWeek=new Date();
-    let intDAy=daysOfTheWeek.getDay();
-    let currentDay=days[intDAy]
-    console.log(intDAy)
-
-    res.render("list",{Day:currentDay,
-    Date:daysOfTheWeek})
+    res.render("list", {
+        Fname:req.body.Fname,
+        Day:myday,
+        Date: daysOfTheWeek
+    })
 
 
 
