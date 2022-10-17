@@ -9,16 +9,19 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
+let items=["Milk","Bread"];
+let WorkOutlist=["Bench","Squat"];
+
 app.use(express.static("public"))
 
 
 
 
-app.get("/",function(req,res){
-    res.sendFile(__dirname+"/index.html")
-})
+// app.get("/",function(req,res){
+//     res.sendFile(__dirname+"/index.html")
+// })
 
-app.post("/", function (req, res) {
+app.get("/", function (req, res) {
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursay", "Friday", "Saturday"]
     let daysOfTheWeek = new Date();
     let intDAy = daysOfTheWeek.getDay();
@@ -26,13 +29,26 @@ app.post("/", function (req, res) {
     console.log(myday)
 
     res.render("list", {
-        Fname:req.body.Fname,
+        Fname:"Faeem",
         Day:myday,
-        Date: daysOfTheWeek
+        Date: daysOfTheWeek,
+        newItems:items,
+        workout:WorkOutlist
+
     })
 
 
 
+})
+
+
+app.post("/",function(req,res){
+    item=req.body.newItem
+    workoutItem=req.body.workoutItem;
+    WorkOutlist.push(workoutItem)
+    
+    items.push(item)
+    res.redirect("/")
 })
 
 
