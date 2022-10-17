@@ -64,7 +64,4 @@ messageVisibility(false, ".message", "message")
 messageVisibility(true, ".card", "hovering")
 
 
-let buttonadded=document.querySelector(".ButtonAdded")
-buttonadded.addEventListener("click",function(){
-    console.log(this)
-})
+

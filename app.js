@@ -9,11 +9,13 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-let items=["Milk","Bread"];
-let WorkOutlist=["Bench","Squat"];
+let items = ["Milk", "Bread"];
+let WorkOutlist = ["Bench", "Squat"];
 
 app.use(express.static("public"))
 
+
+let deleteitem = ""
 
 
 
@@ -26,14 +28,16 @@ app.get("/", function (req, res) {
     let daysOfTheWeek = new Date();
     let intDAy = daysOfTheWeek.getDay();
     let myday = days[intDAy]
-    console.log(myday)
+
+
+
 
     res.render("list", {
-        Fname:"Faeem",
-        Day:myday,
+        Fname: "Faeem",
+        Day: myday,
         Date: daysOfTheWeek,
-        newItems:items,
-        workout:WorkOutlist
+        newItems: items,
+        workout: WorkOutlist
 
     })
 
@@ -42,14 +46,42 @@ app.get("/", function (req, res) {
 })
 
 
-app.post("/",function(req,res){
-    item=req.body.newItem
-    workoutItem=req.body.workoutItem;
-    WorkOutlist.push(workoutItem)
-    
-    items.push(item)
+app.post("/", function (req, res) {
+    deleteitem = req.body.deleteWorkout
+    deleteitem1=req.body.deleteItem;
+    item = req.body.newItem
+    workoutItem = req.body.workoutItem;
+
+    addItem(WorkOutlist, workoutItem);
+    addItem(items,item)
+   
+
+    deleteitems(WorkOutlist, deleteitem);
+    deleteitems(items,deleteitem1)
+
+
     res.redirect("/")
 })
+
+
+
+
+
+
+
+function addItem(array, item) {
+    array.push(item)
+}
+
+
+function deleteitems(array, item) {
+    for (var i = 0; i < array.length; i++) {
+        if (array[i] === item) {
+            array.splice(i, 1)
+        }
+    }
+
+}
 
 
 

@@ -37,7 +37,7 @@
     border: 1px solid white;
 }
 
-.middle-container {
+.middle-container,.bottom-container {
     margin-top: 50px;
     ;
     text-align: center;
@@ -53,7 +53,7 @@
 }
 
 .greybg {
-    background-color: grey;
+    background-color:white;
 }
 
 .darkbg {
