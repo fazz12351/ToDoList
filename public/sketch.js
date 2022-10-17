@@ -55,7 +55,7 @@ function TimeOfDay(time) {
     }
 }
 
-
+Hours=13;
 
 TimeOfDay(Hours)
 
@@ -63,3 +63,5 @@ messageVisibility(false, ".message", "message")
 
 messageVisibility(true, ".card", "hovering")
 
+
+console.log("file has been called");

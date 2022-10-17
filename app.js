@@ -11,6 +11,8 @@ app.use(bodyParser.urlencoded({
 
 app.use(express.static("public"))
 
+var item="";
+
 
 
 
@@ -28,10 +30,30 @@ app.post("/", function (req, res) {
     res.render("list", {
         Fname:req.body.Fname,
         Day:myday,
-        Date: daysOfTheWeek
+        Date: daysOfTheWeek,
+        newListItem:item
     })
 
+    // let name=req.body.Fname
 
+    // let today=new Date();
+    // let format={weekday:"long",year:"numeric",month:"long",day:"numeric"};
+    // let Day=today.toLocaleDateString("en-US",format)
+
+
+    // res.render("list",{
+    //     Day:Day,
+    //     Fname:name
+    // })
+
+
+
+
+})
+
+app.post("/addItem",function(req,res){
+    let item=req.body.name
+    res.redirect("/")
 
 })
 
