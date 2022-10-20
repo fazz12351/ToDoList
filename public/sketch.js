@@ -1,10 +1,12 @@
+// let usersname=prompt("Please enter Your name")
+
 let messages = document.querySelectorAll(".message")
 let body = document.querySelector("body")
 let container = document.querySelector(".container");
 let today = new Date();
 let Hours = today.getHours();
-
 let containers=document.querySelectorAll(".container")
+let welcomemessage=document.querySelector(".welcome")
 
 
 
@@ -22,7 +24,6 @@ function messageVisibility(array, object, dec) {
         objects.classList.add(dec)
     }
 }
-
 
 //function checks the time of sday and set the UI based oon the curretn time
 function TimeOfDay(time) {
@@ -56,12 +57,17 @@ function TimeOfDay(time) {
 }
 
 
-
 TimeOfDay(Hours)
 
 messageVisibility(false, ".message", "message")
 
 messageVisibility(true, ".card", "hovering")
+
+
+// welcomemessage.innerHTML="Welcome "+usersname;
+
+
+
 
 
 

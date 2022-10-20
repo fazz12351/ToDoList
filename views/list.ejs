@@ -15,7 +15,22 @@
 </head>
 
 <body>
+    <!-- Just an image -->
+    <nav class="navbar navbar-dark bg-dark">
+
+        <form action="/View" method="post">
+            <button type="submit" class="btn btn-info">Switch UI</button>
+
+        </form>
+
+    </nav>
+
+
+   
     <h1 class="welcome">Welcome <em><%=Fname%></h1></em>
+
+
+
 
 
 
@@ -107,7 +122,7 @@
 
                             <form style="padding-top:15px;padding-left:17px;" action="/" method="post">
                                 <input placeholder="Delete Workout" type="text" name="deleteWorkout">
-                                <button  type="submit" class="btn btn-danger">Delete</button>
+                                <button type="submit" class="btn btn-danger">Delete</button>
                             </form>
                         </div>
                     </div>
@@ -118,8 +133,7 @@
                 <div class="col-sm-12 col-md-4">
                     <div style="width: 100%; " class="card" style="width: 18rem;">
                         <img style="height:200px" class="card-img-top "
-                            src="https://i.ytimg.com/vi/GMa1xbjdtHk/maxresdefault.jpg"
-                            alt="Card image cap">
+                            src="https://i.ytimg.com/vi/GMa1xbjdtHk/maxresdefault.jpg" alt="Card image cap">
                         <div style="height:190px ;" class="card-body">
                             <form action="/" method="post">
                                 <input placeholder="Add New Workout" type="text" name="newItem">
@@ -128,13 +142,13 @@
 
                             <form style="padding-top:15px;padding-left:17px;" action="/" method="post">
                                 <input placeholder="Delete Workout" type="text" name="deleteItem">
-                                <button  type="submit" class="btn btn-danger">Delete</button>
+                                <button type="submit" class="btn btn-danger">Delete</button>
                             </form>
                         </div>
                     </div>
                 </div>
 
-<!-- 
+                <!-- 
 
                 <div class="col-sm-12 col-md-4">
                     <div style="width: 100%; " class="card" style="width: 18rem;">
